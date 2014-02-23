@@ -1,7 +1,7 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-boot2docker stop > /dev/null 2>&1
-VBoxManage controlvm boot2docker-vm poweroff > /dev/null 2>&1
+source $DIR/down.sh
 
 export DOCKER_HOST=tcp://127.0.0.1:4243
 
