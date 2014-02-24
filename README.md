@@ -12,6 +12,8 @@ Requires [brew](http://brew.sh/) and will install it if it isn't found.
 
     docmac
 
+![docmac](https://raw.github.com/thlorenz/docmac/master/assets/docmac.png)
+
 ## Resources
 
 Most of the bin scripts have been adapted from these [installation
