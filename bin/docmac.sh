@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+(command -v brew >/dev/null 2>&1) || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
 # add brew-cask to brew (needed to install virtual box)
 brew update
 brew tap phinze/cask
@@ -21,12 +23,12 @@ boot2docker init
 boot2docker stop > /dev/null 2>&1
 
 # forward default docker ports on vm in order to be able to interact with running containers
-echo "\n\033[00;90mForwarding default docker ports (49000..49900) on boot2docker-vm \033[00m\n"
+echo "\n\033[00;90mForwarding default docker ports (49000..49900) on boot2docker-vm (this may take a while, so be patient) \033[00m\n"
 
-#for i in {49000..49900}; do
- #VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port$i,tcp,,$i,,$i";
- #VBoxManage modifyvm "boot2docker-vm" --natpf1 "udp-port$i,udp,,$i,,$i";
-#done
+for i in {49000..49900}; do
+ VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port$i,tcp,,$i,,$i";
+ VBoxManage modifyvm "boot2docker-vm" --natpf1 "udp-port$i,udp,,$i,,$i";
+done
 
 echo '\033[00;31mAdd\033[00m "export DOCKER_HOST=tcp://localhost:4243" to your ~/.bashrc"'
 echo '\033[00;32mRun\033[00m "boot2docker up" to start docker vm'

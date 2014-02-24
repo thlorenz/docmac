@@ -1,17 +1,16 @@
 # docmac
 
-Wrapper around docker, boot2docker and Virtual Box, that makes installing and running docker on a Mac a breeze.
+Install docker on Mac including VirtualBox and boot2docker dependencies with one simple command.
 
-## Status
+## Installation
 
-**Alpha**, `bin` files work, so to install and launch docker you can do:
+Requires [brew](http://brew.sh/) and will install it if it isn't found.
 
-```sh
-bin/install.sh
-bin/up.sh
-```
+    npm i -g docmac
 
-You can then play with one of the examples.
+## Run
+
+    docmac
 
 ## Resources
 
