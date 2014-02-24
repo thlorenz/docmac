@@ -1,0 +1,37 @@
+{
+  "name": "docmac",
+  "version": "0.0.0",
+  "description": "Install docker on Mac including VirtualBox and boot2docker dependencies with one simple command.",
+  "bin": "bin/docmac.sh",
+  "directories": {
+    "doc": "doc",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/docmac.git"
+  },
+  "keywords": [
+    "docker",
+    "boot2docker",
+    "Mac",
+    "VirtualBox",
+    "Mavericks"
+  ],
+  "author": {
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "http://thlorenz.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/thlorenz/docme/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/thlorenz/docmac/issues"
+  },
+  "homepage": "https://github.com/thlorenz/docmac"
+}
