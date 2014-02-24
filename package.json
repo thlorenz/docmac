@@ -1,6 +1,6 @@
 {
   "name": "docmac",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Install docker on Mac including VirtualBox and boot2docker dependencies with one simple command.",
   "bin": "bin/docmac.sh",
   "directories": {
