@@ -2,13 +2,17 @@
 
 (command -v brew >/dev/null 2>&1) || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-# add brew-cask to brew (needed to install virtual box)
 brew update
-brew tap phinze/cask
-brew install brew-cask
 
-# install virtual box to use as virtual machine
-brew cask install virtualbox
+if (command -v VirtualBox >/dev/null 2>&1); then
+  echo VirtualBox already installed
+else
+  # add brew-cask to brew (needed to install virtual box)
+  brew install caskroom/cask/brew-cask
+
+  # install virtual box to use as virtual machine
+  brew cask install virtualbox
+fi
 
 # boot2docker
 brew install boot2docker
