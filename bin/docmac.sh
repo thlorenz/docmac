@@ -2,7 +2,9 @@
 
 (command -v brew >/dev/null 2>&1) || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo 'Running "brew update", this may take a while, so sit tight'
 brew update
+echo "Ok let's move on, shall we?"
 
 if (command -v VirtualBox >/dev/null 2>&1); then
   echo VirtualBox already installed
